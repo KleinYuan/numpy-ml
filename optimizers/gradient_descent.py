@@ -1,7 +1,7 @@
 import numpy as np
 
 
-class Optimizer(object):
+class LinearRegressionOptimizer(object):
     def __init__(self, num_samples, num_features, features, labels, converge_loss=2):
         self.converge_loss = converge_loss
         self.features = features

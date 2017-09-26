@@ -28,7 +28,7 @@ class Model(object):
         self.features = np.concatenate((np.array(features, dtype=float), const.T), axis=1)
         self.labels = np.array(labels, dtype=float)
 
-        self.optimizer = gradient_descent.Optimizer(num_samples=self.num_samples, num_features=self.num_features, features=self.features, labels=self.labels)
+        self.optimizer = gradient_descent.LinearRegressionOptimizer(num_samples=self.num_samples, num_features=self.num_features, features=self.features, labels=self.labels)
         self.optimizer.optimize()
 
         self.hypothesis_matrix = self.optimizer.get_hypothesis()
